@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "modularization": "node modularization/index.js",
+    "process-object": "node process-object/index.js",
+    "node-package-manager": "node node-package-manager/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
