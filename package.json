@@ -7,7 +7,8 @@
     "modularization": "node modularization/index.js",
     "process-object": "node process-object/index.js",
     "node-package-manager": "node node-package-manager/index.js",
-    "events": "node events/index.js"
+    "events": "node events/index.js",
+    "nodejs-web-server": "node nodejs-web-server/server.js"
   },
   "keywords": [],
   "author": "",
