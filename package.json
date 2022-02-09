@@ -8,7 +8,8 @@
     "process-object": "node process-object/index.js",
     "node-package-manager": "node node-package-manager/index.js",
     "events": "node events/index.js",
-    "nodejs-web-server": "node nodejs-web-server/server.js"
+    "nodejs-web-server": "node nodejs-web-server/server.js",
+    "filesystem": "node filesystem/index.js"
   },
   "keywords": [],
   "author": "",
