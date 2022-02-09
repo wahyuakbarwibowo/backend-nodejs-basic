@@ -9,7 +9,8 @@
     "node-package-manager": "node node-package-manager/index.js",
     "events": "node events/index.js",
     "nodejs-web-server": "node nodejs-web-server/server.js",
-    "filesystem": "node filesystem/index.js"
+    "filesystem": "node filesystem/index.js",
+    "stream": "node stream/index.js"
   },
   "keywords": [],
   "author": "",
