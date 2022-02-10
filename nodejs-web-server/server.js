@@ -9,15 +9,21 @@ const requestListener = (request, response) => {
   if (url === '/') {
     if (method === 'GET') {
       response.statusCode = 200;
-      response.end('{ "data": \'Halaman get\' }');
+      response.end(JSON.stringify({
+        message: 'halaman utama'
+      }));
     } else {
       response.statusCode = 400;
-      response.end('<h1>tidak dapat menerima sembarang request</h1>');
+      response.end(JSON.stringify({
+        message: 'tidak menerima request yang diberikan'
+      }));
     }
   } else if (url === '/about') {
     if (method === 'GET') {
       response.statusCode = 200;
-      response.end('<h1>ini adalah halaman about</h1>');
+      response.end(JSON.stringify({
+        message: 'halaman tentang'
+      }));
     } else if (method === 'POST') {
       let body = [];
 
@@ -29,15 +35,21 @@ const requestListener = (request, response) => {
         body = Buffer.concat(body).toString();
         const { name } = JSON.parse(body);
         response.statusCode = 201;
-        response.end(`<h1>Hellowww ABout nihhh, ${name}! What you will learn ? hehe</h1>`);
+        response.end(JSON.stringify({
+          message: `Hellowww About nihhh, ${name}! What you will learn ? hehe`
+        }));
       });
     } else {
       response.statusCode = 400;
-      response.end('<h1>tidak dapat menerima sembarang request untuk url about</h1>');
+      response.end(JSON.stringify({
+        message: 'tidak dapat menerima sembarang request untuk url about'
+      }));
     }
   } else {
     response.statusCode = 404;
-    response.end('<h1>not found ya guys ya</h1>');
+    response.end(JSON.stringify({
+      message: 'not found ya guys ya'
+    }));
   }
 
 };
