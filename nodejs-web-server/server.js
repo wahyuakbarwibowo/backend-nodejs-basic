@@ -1,14 +1,15 @@
 const http = require('http');
 
 const requestListener = (request, response) => {
-  response.setHeader('Content-Type', 'text/html');
+  response.setHeader('Content-Type', 'application/json');
+  response.setHeader('X-Powered-By', 'NodeJS');
 
   const { method, url } = request;
 
   if (url === '/') {
     if (method === 'GET') {
       response.statusCode = 200;
-      response.end('<h1>Ini adalah halaman homepage</h1>');
+      response.end('{ "data": \'Halaman get\' }');
     } else {
       response.statusCode = 400;
       response.end('<h1>tidak dapat menerima sembarang request</h1>');
